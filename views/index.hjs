@@ -5,7 +5,7 @@
     <link rel='stylesheet' href='/stylesheets/style.css' />
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
     <script type="text/javascript" src='javascripts/underscore.js'></script>
-    
+
     <script type="text/javascript" src='javascripts/layout.js'></script>
     <script type="text/javascript" src='javascripts/navbar.js'></script>
     <script type="text/javascript" src='javascripts/organizer.js'></script>
@@ -29,13 +29,15 @@
         New select option:<input id='select-text' type='text' placeholder='option value'></input>
         <button id='select-submit'>Submit</button>
 	</div>
+	<h3>-----jOrg-----</h3>
 	<div class='jOrg'>
-		<button id='create'>Create List</button>
 		<div id='form'>
 			<input id='item-input' type='text'></input>
 			<button id='add-item'>Add list item</button>
 		</div>
-		<span id='list'></span>
+		<span id='list'>
+			<button id='create'>Create List</button>
+		</span>
 	</div>
 	</body>
 </html>

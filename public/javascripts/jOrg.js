@@ -3,13 +3,13 @@
 //create list navbar
 
 var JORG = function(){
+	this.createList = function(){
+		this.html('<p>jOrg list</p> <ul class="jOrg-list"></ul>');
+	}
 
-}
-
-var createList = function(){
-	this.html('<li class="jOrg-list"></li>');
-}
-
-var appendItem = function(){
-	
+	this.appendItem = function(_item){
+		var $html = $('<li>' + _item + '</li>');
+		var $parent = this;
+		$parent.append($html);
+	}
 }

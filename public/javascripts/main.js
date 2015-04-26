@@ -30,16 +30,18 @@ $(function(){
 
 
 	$('.jOrg').find('#create').on('click', function(){
+		jOrg = new JORG();
 		console.log('create button pushed');
-		createList.call($('.jOrg').find('#list'));
+		jOrg.createList.call($('.jOrg').find('#list'));
 	});
 
 	$('.jOrg').find('#add-item').on('click', function(){
 		console.log('form submitted');
 		var item_text = $('.jOrg').find('#item-input').val();
+		var $parent = $('.jOrg').find('ul');
 		if(item_text !== ''){
 			console.log('text: ', item_text);
-			appendItem(item_text);
+			jOrg.appendItem.call($parent, item_text);
 		}
 		else{
 			console.log('text: item text invalid');
