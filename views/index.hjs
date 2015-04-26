@@ -16,5 +16,15 @@
     <div class='second-layout'></div>
     <div class='nav-bar'></div>
     <div class='list'></div>
-  </body>
+    <div class='test-bar'>
+        <!-- add option to navbar via text-input and submit-button -->
+        <select class='select'>
+        	<option value='Carrots'>Carrots</option>
+        	<option value='Peas'>Peas</option>
+        	<option value='Apples'>Apples</option>
+        </select>
+        New select option:<input id='select-text' type='text' placeholder='option value'></input>
+        <button id='select-submit'>Submit</button>
+	</div>
+	</body>
 </html>

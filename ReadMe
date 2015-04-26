@@ -6,3 +6,9 @@ currently consists of:
 	working on the makings of an organized list
 
 - John O'Donnell
+
+
+
+notes:
+	wasn't a fan of available JS UI available for html.
+	use of .call() for appending to jQuery objects.

@@ -1,18 +1,21 @@
 //creat navbar for a list of items, accepts array of objects
 
+var NavBar = function(){
+
+}
 
 Object.prototype.createNavBar = function(_arr){
 	var $parent = this;
 	for (var i = 0 ; i < _arr.length ; i++){
 		switch(_arr[i].type){
 			case 'radio':
-				$parent.appendRadio(_arr[i].name, _arr[i].text);
+				appendRadio.call($parent, _arr[i].name, _arr[i].text);
 				break;
 			case 'select':
-				$parent.appendSelect(_arr[i].options);
+				appendSelect.call($parent, _arr[i].options);
 				break;
 			case 'input':
-				$parent.appendInput(_arr[i].subType);
+				appendInput.call($parent, _arr[i].subType);
 				break;
 			default:
 				break;
@@ -21,13 +24,15 @@ Object.prototype.createNavBar = function(_arr){
 	console.log('navbar created');
 }
 
-Object.prototype.appendRadio = function(_name, _text){
+
+
+var appendRadio = function(_name, _text){
 	var $html = $('<input type="radio" name="' + _name + '">' + _text + '</input>');
 	var $parent = this;
 	$parent.append($html);
 }
 
-Object.prototype.appendSelect = function(_options){
+var appendSelect = function(_options){
 	var options_html = [];
 	var $parent = this;
 	var $child = $('<select>')
@@ -39,7 +44,14 @@ Object.prototype.appendSelect = function(_options){
 	$parent.append('</select>');
 }
 
-Object.prototype.appendInput = function(_type){
+var appendInput = function(_type){
 	var $parent = this;
 	$parent.append('<input></input>');
+}
+
+
+//need custom filter and sort abilities!!!
+
+NavBar.prototype.createFilter = function(_filter){
+
 }

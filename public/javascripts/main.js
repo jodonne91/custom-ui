@@ -6,7 +6,8 @@ $(function(){
 	var arr = [
 		{type: 'radio', name:'one', text:'text for first'}, 
 		{type: 'radio', name:'one', text: 'text for second'}, 
-		{type:'select', options: ['Joe', 'Mike', 'Jeff']}
+		{type:'select', options: ['Joe', 'Mike', 'Jeff']},
+		{type:'input', subType:'text'}
 	]
 
 	$('.nav-bar').createNavBar(arr);
@@ -16,5 +17,14 @@ $(function(){
 	$list_handle.addListItem('Bon Jovi');
 	$list_handle.addListItem('Afrikans');
 	//$list_handle.sortList('asc')
+
+
+	//add options to select via text input and submit button
+	$('#select-submit').on('click', function(){
+		var option_text = $('#select-text').val();
+		$('#select-text').val('');
+		$text = $('<option value="' + option_text + '">' + option_text + '</option>')
+		$('.select').append($text);
+	})
 
 })	;
