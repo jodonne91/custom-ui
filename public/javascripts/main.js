@@ -23,8 +23,32 @@ $(function(){
 	$('#select-submit').on('click', function(){
 		var option_text = $('#select-text').val();
 		$('#select-text').val('');
-		$text = $('<option value="' + option_text + '">' + option_text + '</option>')
+		$text = $('<option value="' + option_text + '">' + option_text + '</option>');
 		$('.select').append($text);
-	})
+	});
+
+
+
+	$('.jOrg').find('#create').on('click', function(){
+		console.log('create button pushed');
+		createList.call($('.jOrg').find('#list'));
+	});
+
+	$('.jOrg').find('#add-item').on('click', function(){
+		console.log('form submitted');
+		var item_text = $('.jOrg').find('#item-input').val();
+		if(item_text !== ''){
+			console.log('text: ', item_text);
+			appendItem(item_text);
+		}
+		else{
+			console.log('text: item text invalid');
+		}
+		//$('.jOrg').find('#list').append('<li>' + item_text + '</li>')
+		$('.jOrg').find('#item-input').val('');
+	});
+
+
+
 
 })	;

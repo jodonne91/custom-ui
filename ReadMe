@@ -12,3 +12,8 @@ currently consists of:
 notes:
 	wasn't a fan of available JS UI available for html.
 	use of .call() for appending to jQuery objects.
+	extending jQuery functions using 
+		jQuery.prototype.fun_name = function(){}
+		jQuery.fn.fun_name = function(){}
+		jQuery.fn.extend({fun_name: function(){}})
+	

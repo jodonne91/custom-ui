@@ -1,7 +1,11 @@
 //an organized list with searchability and sortability
 
+//experimenting with different ways to extend jQuery
+//not sure what differences there are yet
+
+
 //create list and return handle to be used for subsuquent functions
-Object.prototype.createList = function() {
+jQuery.fn.createList = function() {
 	var $parent = this;
 	var $list_html = $('<ul class="ul"></ul>');
 	$parent.append($list_html);
@@ -10,19 +14,21 @@ Object.prototype.createList = function() {
 
 
 //add list item of name
-Object.prototype.addListItem = function(_item){
-	var $parent = this;
-	var $item_html = $('<li>' + _item + '</li>');
-	$parent.append($item_html);
-};
+jQuery.fn.extend({
+	addListItem: function(_item){
+		var $parent = this;
+		var $item_html = $('<li>' + _item + '</li>');
+		$parent.append($item_html);
+	}
+});
 
 
 //sort list by asc or dec
-Object.prototype.sortList = function(_by){
+jQuery.prototype.sortList = function(_by){
 	//get all list items
 	var $parent = this;
-	var html = $parent.
-	$parent.html('');
+	var html = $parent;
+	//$parent.html('');
 	//sort _by
 	//append in sorted order
 }

@@ -47,7 +47,8 @@ var layout3 = function(_parent, _grid){
 
 
 //FUCK yeah!!! this works.. same as layout2 but using Object.prototype on a jquery wrapped object
-Object.prototype.layout4 = function(_columnCount, _rowCount, _height, _width){
+//scratch that, just use jQuery.fn - works better and looks cleaner
+jQuery.fn.layout4 = function(_columnCount, _rowCount, _height, _width){
 	var $parent = this;  //must be jquery object
 	var columnCount = _columnCount;
 	var rowCount = _rowCount;

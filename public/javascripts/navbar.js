@@ -4,7 +4,7 @@ var NavBar = function(){
 
 }
 
-Object.prototype.createNavBar = function(_arr){
+jQuery.prototype.createNavBar = function(_arr){
 	var $parent = this;
 	for (var i = 0 ; i < _arr.length ; i++){
 		switch(_arr[i].type){
