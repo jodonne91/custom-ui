@@ -1,1 +1,8 @@
 Attempt at building custom UI creation functions for HTML5 using jQuery and vanilla Javascript.
+
+currently consists of:
+	layout generator for num-columns and num-rows
+	crappy navbar generator
+	working on the makings of an organized list
+
+- John O'Donnell
